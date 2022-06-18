@@ -22,7 +22,7 @@ app.get('/login', (req, res) => {
     const {email, password} = req.body;
     res.json({
         email: "usac@gmail.com",
-        password: "dsadsa"
+        password: "12345"
     });
 });
 

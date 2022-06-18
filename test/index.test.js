@@ -12,12 +12,14 @@ describe('GET /registro', () => {
         expect(response.body.id).toEqual(1);
     });
     
+    
     test('(Codigo 200) verificando que el nombre de usuario no sea null', async () => {
         const response = await request(app).get("/registro").send();
         expect(response.body.user).not.toBeNull();
     });
 
 });
+
 
 describe('GET /login', () => {
     test('(Codigo 200) comprobando que la peticion si es existente y si es de tipo GET', async () => {
@@ -35,7 +37,6 @@ describe('GET /login', () => {
         expect(response.body.email).toMatch("usac@gmail.com");
     });
 });
-
 
 describe('GET /asing', () => {
     test('(Codigo 200) comprobando que la peticion si es existente y si es de tipo GET', async () => {
